@@ -40,7 +40,6 @@ section{padding:110px 0}
 ::-webkit-scrollbar-track{background:var(--navy)}
 ::-webkit-scrollbar-thumb{background:var(--lime);border-radius:10px}
 
-
 /* ─── ANNOUNCEMENT BAR ─── */
 .ann-bar{
   background:var(--lime);color:var(--navy);
@@ -120,6 +119,42 @@ section{padding:110px 0}
 .ticker-item{font-family:var(--B);font-size:.78rem;color:var(--slate);padding:0 32px;display:inline-flex;align-items:center;gap:16px}
 .ticker-item::after{content:'◆';font-size:.4rem;color:var(--lime);opacity:.7}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+
+/* ─── TEAM (light background) ─── */
+#team .tc-top {
+  width: 180px;                     /* diameter of the circle — adjust between 160–220px */
+  height: 180px;                    /* must be equal to width for perfect circle */
+  margin: 0 auto 20px;              /* center horizontally + space below */
+  background: linear-gradient(135deg, #fdfaf5 0%, #f8f5f0 100%);
+  border-radius: 50%;               /* makes it circular */
+  overflow: hidden;
+  border: 4px solid var(--lime);    /* optional: nice gold border */
+  box-shadow: 0 8px 24px rgba(184,146,42,0.15); /* optional: subtle shadow */
+  position: relative;
+}
+
+/* Image inside the circle */
+#team .tc-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;                /* fills the circle, crops edges if needed */
+  object-position: 50% 20%;         /* 20% from top — good for most portraits (shows head & shoulders) */
+  /* Alternative positions if needed: 
+     - 50% 10%   → more head visible
+     - 50% 30%   → more face/shoulders
+  */
+}
+
+/* Optional: make the whole card more compact around the circle */
+#team .tc {
+  text-align: center;               /* center text below photo */
+  padding-top: 25px;                   /* remove top padding if needed */
+}
+
+#team .tc-body {
+  padding: 20px 24px;               /* slightly less top padding */
+}
 /* ─── SECTION LABELS ─── */
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--B);font-size:.65rem;color:var(--lime);letter-spacing:.24em;text-transform:uppercase;margin-bottom:16px}
 .eyebrow::before{content:'//';font-family:var(--H);font-weight:800;font-size:.7rem;color:var(--lime);opacity:.7}
@@ -151,19 +186,21 @@ section{padding:110px 0}
 .cac-badge{background:var(--navy);color:var(--lime);font-family:var(--H);font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:12px 18px;border-radius:var(--r);display:inline-flex;align-items:center;gap:10px;margin-top:24px;position:relative;z-index:1;align-self:flex-start}
 .cac-badge i{font-size:.9rem}
 
-/* ─── SERVICES ─── */
-#services{background:var(--navy);position:relative;overflow:hidden}
+/* ─── SERVICES (light background) ─── */
+#services{background:var(--offw);position:relative;overflow:hidden}
+#services .sec-h{color:var(--navy)}
+#services .sec-sub{color:var(--slate)}
 .services-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:64px;gap:40px;flex-wrap:wrap}
 .services-top .sec-sub{color:var(--slate)}
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.svc-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:36px 32px;transition:.35s;position:relative;overflow:hidden;cursor:default}
+.svc-card{background:var(--white);border:1px solid #e2e6f0;border-radius:var(--r);padding:36px 32px;transition:.35s;position:relative;overflow:hidden;cursor:default;color:var(--navy)}
 .svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--lime);transform:scaleX(0);transform-origin:left;transition:.4s}
-.svc-card:hover{border-color:rgba(184,146,42,.25);transform:translateY(-6px);background:var(--navy3)}
+.svc-card:hover{border-color:var(--lime2);transform:translateY(-6px);background:#fdfaf5}
 .svc-card:hover::before{transform:scaleX(1)}
-.svc-n{font-family:var(--H);font-size:.58rem;font-weight:700;color:rgba(184,146,42,.5);letter-spacing:.2em;text-transform:uppercase;margin-bottom:20px}
+.svc-n{font-family:var(--H);font-size:.58rem;font-weight:700;color:rgba(184,146,42,.6);letter-spacing:.2em;text-transform:uppercase;margin-bottom:20px}
 .svc-emoji{font-size:2rem;margin-bottom:16px;display:block}
-.svc-card h3{font-family:var(--H);font-size:1.15rem;font-weight:700;color:var(--white);margin-bottom:12px;line-height:1.2}
-.svc-card p{font-size:.82rem;color:var(--slate);line-height:1.85;font-weight:300}
+.svc-card h3{font-family:var(--H);font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:12px;line-height:1.2}
+.svc-card p{font-size:.82rem;color:#5a6480;line-height:1.85;font-weight:300}
 .svc-arr{display:inline-flex;align-items:center;gap:6px;color:var(--lime);font-size:.75rem;font-weight:600;margin-top:20px;letter-spacing:.06em;text-transform:uppercase;opacity:0;transition:.3s}
 .svc-card:hover .svc-arr{opacity:1;transform:translateX(4px)}
 
@@ -186,38 +223,40 @@ section{padding:110px 0}
 .prod-tile.featured .pt-name{font-size:1.4rem}
 .pt-desc{font-size:.78rem;color:var(--slate);line-height:1.8;font-weight:300}
 
-/* ─── WHY ─── */
-#why{background:var(--navy2);padding:110px 0}
+/* ─── WHY (light background) ─── */
+#why{background:var(--offw);padding:110px 0}
+#why .sec-h{color:var(--navy)}
+#why .sec-sub{color:var(--slate)}
 .why-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .why-left .sec-sub{color:var(--slate);margin-top:16px}
-.why-big-num{font-family:var(--H);font-size:clamp(6rem,12vw,10rem);font-weight:800;color:transparent;-webkit-text-stroke:1px rgba(184,146,42,.2);line-height:1;margin-bottom:20px}
+.why-big-num{font-family:var(--H);font-size:clamp(6rem,12vw,10rem);font-weight:800;color:transparent;-webkit-text-stroke:1px rgba(184,146,42,.3);line-height:1;margin-bottom:20px}
 .why-list{display:flex;flex-direction:column;gap:0}
-.why-row{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:24px 0;border-bottom:1px solid var(--border);align-items:start;transition:.25s}
+.why-row{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:24px 0;border-bottom:1px solid #e2e6f0;align-items:start;transition:.25s}
 .why-row:first-child{padding-top:0}
 .why-row:last-child{border-bottom:none}
 .why-row:hover{padding-left:6px}
 .wr-num{font-family:var(--H);font-size:.6rem;font-weight:700;color:var(--lime);letter-spacing:.1em;padding-top:3px}
-.wr-content h4{font-family:var(--H);font-size:1rem;font-weight:700;color:var(--white);margin-bottom:7px}
-.wr-content p{font-size:.83rem;color:var(--slate);line-height:1.8;font-weight:300}
+.wr-content h4{font-family:var(--H);font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:7px}
+.wr-content p{font-size:.83rem;color:#5a6480;line-height:1.8;font-weight:300}
 
-/* ─── TEAM ─── */
-#team{background:var(--navy);padding:110px 0}
+/* ─── TEAM (light background) ─── */
+#team{background:var(--offw);padding:110px 0}
+#team .sec-h{color:var(--navy)}
 .team-header{text-align:center;max-width:580px;margin:0 auto 72px}
 .team-header .eyebrow{justify-content:center}
-.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.tc{background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:.35s}
-.tc:hover{border-color:rgba(184,146,42,.25);transform:translateY(-8px);box-shadow:0 24px 60px rgba(0,0,0,.4)}
-.tc-top{height:160px;background:linear-gradient(135deg,var(--navy3) 0%,var(--navy2) 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.tc-top::before{content:'';position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(184,146,42,.08) 0%,transparent 65%);bottom:-60px;right:-40px}
-.tc-init{width:72px;height:72px;background:rgba(184,146,42,.12);border:2px solid rgba(184,146,42,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--H);font-size:1.5rem;font-weight:800;color:var(--lime);position:relative;z-index:1}
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:900px;margin:0 auto}
+.tc{background:var(--white);border:1px solid #e2e6f0;border-radius:8px;overflow:hidden;transition:.35s}
+.tc:hover{border-color:var(--lime);transform:translateY(-8px);box-shadow:0 24px 60px rgba(0,0,0,.12)}
+.tc-top{height:220px;background:linear-gradient(135deg,#fdfaf5 0%,#f8f5f0 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.tc-top img{width:100%;height:100%;object-fit:cover}
 .tc-body{padding:26px}
 .tc-role{font-size:.6rem;color:var(--lime);letter-spacing:.2em;text-transform:uppercase;font-family:var(--H);font-weight:700;margin-bottom:8px}
-.tc-name{font-family:var(--H);font-size:1.25rem;font-weight:800;color:var(--white);margin-bottom:4px}
+.tc-name{font-family:var(--H);font-size:1.25rem;font-weight:800;color:var(--navy);margin-bottom:4px}
 .tc-divider{width:28px;height:3px;background:var(--lime);margin:12px 0}
-.tc-bio{font-size:.8rem;color:var(--slate);line-height:1.8;font-weight:300;margin-bottom:16px}
-.tc-mail{display:flex;align-items:center;gap:8px;font-size:.72rem;color:var(--slate);word-break:break-all}
+.tc-bio{font-size:.8rem;color:#5a6480;line-height:1.8;font-weight:300;margin-bottom:16px}
+.tc-mail{display:flex;align-items:center;gap:8px;font-size:.72rem;color:#5a6480;margin-top:8px}
 .tc-mail i{color:var(--lime);font-size:.8rem;flex-shrink:0}
-.tc-mail a{color:var(--slate);transition:.2s}
+.tc-mail a{color:#5a6480;transition:.2s}
 .tc-mail a:hover{color:var(--lime)}
 
 /* ─── CONTACT ─── */
@@ -297,7 +336,7 @@ footer{background:var(--navy2);padding:72px 0 0;border-top:1px solid var(--borde
   .about-flex{grid-template-columns:1fr}
   .why-wrap{grid-template-columns:1fr}
   .why-big-num{display:none}
-  .team-grid{grid-template-columns:1fr 1fr}
+  .team-grid{grid-template-columns:1fr}
   .ft-main{grid-template-columns:1fr 1fr}
   .contact-grid{grid-template-columns:1fr}
   .ci-panel{border-radius:8px}
@@ -664,38 +703,38 @@ footer{background:var(--navy2);padding:72px 0 0;border-top:1px solid var(--borde
     <div class="team-grid">
       <div class="tc fade-up">
         <div class="tc-top">
-          <div class="tc-init">RYM</div>
+          <img src="./assets/ceo.jpg" alt="Rukayya Yau Muhammad">
         </div>
         <div class="tc-body">
-          <div class="tc-role">Founder &amp; Chief Executive Officer</div>
+          <div class="tc-role">Founder & Chief Executive Officer</div>
           <div class="tc-name">Rukayya Yau Muhammad</div>
           <div class="tc-divider"></div>
           <p class="tc-bio">Founding shareholder and CEO of HABYM Nigeria Ltd, holding 1,000,000 shares. Based at 50, Muhammadu Buhari Way, Kano. Drives the company's strategy for commodity trading and international market expansion.</p>
-          <div class="tc-mail"><i class="fas fa-envelope"></i><a href="/cdn-cgi/l/email-protection#0e7c77634e666f6c7763206d6163206069"><span class="__cf_email__" data-cfemail="e092998da0888182998dce838f8dce8e87">[email&#160;protected]</span></a></div>
+          <div class="tc-mail">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:rym@habym.com.ng">rym@habym.com.ng</a>
+          </div>
+          <div class="tc-mail">
+            <i class="fas fa-phone-alt"></i>
+            <span>+234 8032849071</span>
+          </div>
         </div>
       </div>
+
       <div class="tc fade-up">
         <div class="tc-top">
-          <div class="tc-init">GM</div>
+          <img src="./assets/gm.jpg" alt="Suleiman Salisu">
         </div>
         <div class="tc-body">
           <div class="tc-role">General Manager</div>
-          <div class="tc-name">General Manager</div>
-          <div class="tc-divider"></div>
-          <p class="tc-bio">Responsible for day-to-day operations, trade execution, supplier management, and ensuring HABYM's domestic and export activities run with full efficiency and integrity.</p>
-          <div class="tc-mail"><i class="fas fa-envelope"></i><a href="/cdn-cgi/l/email-protection#81c6ecc1e9e0e3f8ecafe2eeecafefe6"><span class="__cf_email__" data-cfemail="195e745971787b6074377a767437777e">[email&#160;protected]</span></a></div>
-        </div>
-      </div>
-      <div class="tc fade-up">
-        <div class="tc-top">
-          <div class="tc-init">SS</div>
-        </div>
-        <div class="tc-body">
-          <div class="tc-role">Legal Adviser &amp; Incorporation Witness</div>
           <div class="tc-name">Suleiman Salisu</div>
           <div class="tc-divider"></div>
-          <p class="tc-bio">Legal practitioner and official witness to HABYM's Articles of Association. Based at 16, Idris Garba Close, Abuja, FCT, Nigeria. Provides ongoing legal guidance to the company.</p>
-          <div class="tc-mail"><i class="fas fa-envelope"></i><a href="/cdn-cgi/l/email-protection#533a3d353c133b32312a3e7d303c3e7d3d34"><span class="__cf_email__" data-cfemail="4e272028210e262f2c3723602d2123602029">[email&#160;protected]</span></a></div>
+          <p class="tc-bio">Responsible for day-to-day operations, trade execution, supplier management, logistics coordination, and ensuring HABYM's domestic and export activities run with full efficiency and integrity.</p>
+          <div class="tc-mail">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:gm@habym.com.ng">gm@habym.com.ng</a>
+          </div>
+          <!-- No phone for GM -->
         </div>
       </div>
     </div>
@@ -725,21 +764,21 @@ footer{background:var(--navy2);padding:72px 0 0;border-top:1px solid var(--borde
           <div class="citem-ico"><i class="fas fa-envelope"></i></div>
           <div>
             <div class="citem-lbl">General Enquiries</div>
-            <div class="citem-val"><a href="/cdn-cgi/l/email-protection#0960676f664961686b7064276a666427676e"><span class="__cf_email__" data-cfemail="d3babdb5bc93bbb2b1aabefdb0bcbefdbdb4">[email&#160;protected]</span></a></div>
+            <div class="citem-val"><a href="mailto:info@habym.ng"><span class="__cf_email__" data-cfemail="d3babdb5bc93bbb2b1aabefdb0bcbefdbdb4">[email&#160;protected]</span></a></div>
           </div>
         </div>
         <div class="citem">
           <div class="citem-ico"><i class="fas fa-user-tie"></i></div>
           <div>
             <div class="citem-lbl">CEO — Rukayya Yau Muhammad</div>
-            <div class="citem-val"><a href="/cdn-cgi/l/email-protection#67151e0a270f06051e0a4904080a490900"><span class="__cf_email__" data-cfemail="23515a4e634b42415a4e0d404c4e0d4d44">[email&#160;protected]</span></a></div>
+            <div class="citem-val"><a href="mailto:rym@habym.ng"><span class="__cf_email__" data-cfemail="67151e0a270f06051e0a4904080a490900">rym@habym.com.ng</span></a></div>
           </div>
         </div>
         <div class="citem">
           <div class="citem-ico"><i class="fas fa-briefcase"></i></div>
           <div>
             <div class="citem-lbl">General Manager</div>
-            <div class="citem-val"><a href="/cdn-cgi/l/email-protection#652208250d04071c084b060a084b0b02"><span class="__cf_email__" data-cfemail="01466c41696063786c2f626e6c2f6f66">[email&#160;protected]</span></a></div>
+            <div class="citem-val"><a href="mailto:gm@habym.ng"><span class="__cf_email__" data-cfemail="652208250d04071c084b060a084b0b02">[email&#160;gm@habym.com.nh]</span></a></div>
           </div>
         </div>
         <div class="citem">
@@ -842,9 +881,9 @@ footer{background:var(--navy2);padding:72px 0 0;border-top:1px solid var(--borde
       <div class="ft-col">
         <h5>Get In Touch</h5>
         <div class="fci"><i class="fas fa-map-marker-alt"></i><span>50, Muhammadu Buhari Way, Kano, Kano State, Nigeria</span></div>
-        <div class="fci"><i class="fas fa-envelope"></i><a href="/cdn-cgi/l/email-protection#325b5c545d725a53504b5f1c515d5f1c5c55"><span class="__cf_email__" data-cfemail="f1989f979eb1999093889cdf929e9cdf9f96">[email&#160;protected]</span></a></div>
-        <div class="fci"><i class="fas fa-user-tie"></i><a href="/cdn-cgi/l/email-protection#fc8e8591bc949d9e8591d29f9391d2929b"><span class="__cf_email__" data-cfemail="5022293d10383132293d7e333f3d7e3e37">[email&#160;protected]</span></a></div>
-        <div class="fci"><i class="fas fa-briefcase"></i><a href="/cdn-cgi/l/email-protection#eaad87aa828b889387c4898587c4848d"><span class="__cf_email__" data-cfemail="b9fed4f9d1d8dbc0d497dad6d497d7de">[email&#160;protected]</span></a></div>
+        <div class="fci"><i class="fas fa-envelope"></i><a href="mailto:info@habym.ng"><span class="__cf_email__" data-cfemail="325b5c545d725a53504b5f1c515d5f1c5c55">[email&#160;protected]</span></a></div>
+        <div class="fci"><i class="fas fa-user-tie"></i><a href="mailto:info@habym.ng"><span class="__cf_email__" data-cfemail="fc8e8591bc949d9e8591d29f9391d2929b">[email&#160;protected]</span></a></div>
+        <div class="fci"><i class="fas fa-briefcase"></i><a href="mailto:info@habym.ng"><span class="__cf_email__" data-cfemail="eaad87aa828b889387c4898587c4848d">[email&#160;protected]</span></a></div>
         <div class="fci"><i class="fab fa-whatsapp"></i><a href="https://wa.me/2348032849071">+234 803 284 9071</a></div>
       </div>
     </div>
