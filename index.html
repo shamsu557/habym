@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HABYM Nigeria Ltd — Commodity Trading & International Export</title>
+<meta name="description" content="HABYM Nigeria Ltd — CAC-registered Nigerian commodity trading company. Agricultural exports, solid minerals, general merchandise. Kano, Nigeria.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* ═══════════════════════════════════════════════════
+   HABYM NIGERIA LTD  ·  BOLD MODERN TRADE IDENTITY
+   Ink · Gold · Cream  ·  Syne + Instrument Sans
+   ═══════════════════════════════════════════════════ */
+:root{
+  --navy:   #0d0d0d;
+  --navy2:  #161310;
+  --navy3:  #1e1a14;
+  --lime:   #b8922a;
+  --lime2:  #d4aa4a;
+  --white:  #ffffff;
+  --offw:   #f8f5f0;
+  --slate:  #8a8070;
+  --border: #2e2820;
+  --card:   #181410;
+  --H: 'Syne', sans-serif;
+  --B: 'Instrument Sans', sans-serif;
+  --r: 6px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--B);background:var(--navy);color:var(--white);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 32px}
+section{padding:110px 0}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--navy)}
+::-webkit-scrollbar-thumb{background:var(--lime);border-radius:10px}
+
+
+/* ─── ANNOUNCEMENT BAR ─── */
+.ann-bar{
+  background:var(--lime);color:var(--navy);
+  padding:10px 0;text-align:center;
+  font-family:var(--H);font-size:.72rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;
+  position:relative;overflow:hidden;
+}
+.ann-bar::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(90deg,transparent 0px,transparent 120px,rgba(0,0,0,.04) 120px,rgba(0,0,0,.04) 121px);
+}
+.ann-bar span{position:relative;z-index:1}
+.ann-bar a{color:var(--navy);font-weight:800;border-bottom:2px solid var(--navy);transition:.2s}
+.ann-bar a:hover{opacity:.7}
+
+/* ─── NAV ─── */
+#nav{
+  position:sticky;top:0;z-index:999;
+  background:rgba(9,15,31,.94);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  transition:.3s;
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand-mark{
+  width:44px;height:44px;
+  background:var(--lime);
+  clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--H);font-size:1.1rem;font-weight:800;color:var(--navy);
+  flex-shrink:0;
+}
+.brand-words .bw1{font-family:var(--H);font-weight:800;font-size:1.1rem;color:var(--white);letter-spacing:.04em;line-height:1}
+.brand-words .bw2{font-size:.5rem;color:var(--slate);letter-spacing:.22em;text-transform:uppercase;margin-top:3px;font-family:var(--B)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{font-family:var(--B);font-size:.82rem;font-weight:500;color:var(--slate);padding:8px 16px;border-radius:var(--r);transition:.22s;letter-spacing:.02em}
+.nav-links a:hover{color:var(--white);background:var(--border)}
+.nav-links a.active{color:var(--lime)}
+.nav-cta-btn{background:var(--lime)!important;color:var(--navy)!important;font-family:var(--H)!important;font-weight:700!important;padding:10px 22px!important;margin-left:10px;letter-spacing:.06em!important;font-size:.78rem!important;border-radius:var(--r)!important;transition:.25s!important}
+.nav-cta-btn:hover{background:var(--lime2)!important;transform:translateY(-1px)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.burger span{width:24px;height:2px;background:var(--white);border-radius:3px;display:block;transition:.3s}
+
+/* ─── HERO ─── */
+#hero{min-height:100vh;position:relative;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:120px 0 80px}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg::before{content:'';position:absolute;inset:0;background:linear-gradient(125deg,var(--navy) 55%,var(--navy3) 55%)}
+.hero-grid-pat{position:absolute;inset:0;z-index:1;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.3;mask-image:linear-gradient(to bottom,transparent,rgba(0,0,0,.6) 30%,rgba(0,0,0,.6) 70%,transparent)}
+.hero-blob{position:absolute;right:-5%;top:10%;width:560px;height:560px;background:radial-gradient(circle,rgba(184,146,42,.18) 0%,transparent 65%);z-index:2}
+.hero-content{position:relative;z-index:5}
+.hero-topline{display:inline-flex;align-items:center;gap:12px;background:rgba(184,146,42,.08);border:1px solid rgba(184,146,42,.25);padding:7px 16px;border-radius:100px;font-family:var(--B);font-size:.68rem;color:var(--lime);letter-spacing:.18em;text-transform:uppercase;margin-bottom:30px}
+.hero-topline span{width:6px;height:6px;background:var(--lime);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.hero-title{font-family:var(--H);font-size:clamp(3.2rem,7vw,6.4rem);font-weight:800;line-height:.96;letter-spacing:-.02em;color:var(--white);margin-bottom:6px}
+.hero-title .hl{color:var(--lime);display:block}
+.hero-title .ht{color:rgba(255,255,255,.18);display:block;font-size:clamp(2rem,4.5vw,4rem)}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,.55);line-height:1.85;max-width:500px;margin:28px 0 44px;font-weight:300;font-style:italic}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--lime);color:var(--navy);font-family:var(--H);font-weight:700;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;padding:15px 30px;border-radius:var(--r);border:2px solid var(--lime);transition:.3s}
+.btn-primary:hover{background:var(--lime2);transform:translateY(-3px);box-shadow:0 12px 36px rgba(184,146,42,.3)}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--white);font-family:var(--H);font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;padding:15px 30px;border-radius:var(--r);border:2px solid var(--border);transition:.3s}
+.btn-ghost:hover{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.05)}
+.wa-link{display:inline-flex;align-items:center;gap:8px;color:#25d366;font-size:.85rem;font-weight:500;padding:15px 0;transition:.2s}
+.wa-link:hover{color:#1ebe5e}
+.hero-stats{margin-top:80px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.hs{background:var(--card);padding:26px 28px;transition:.3s}
+.hs:hover{background:var(--navy3)}
+.hs-n{font-family:var(--H);font-size:2.4rem;font-weight:800;color:var(--lime);line-height:1}
+.hs-l{font-size:.72rem;color:var(--slate);margin-top:6px;letter-spacing:.04em}
+
+/* ─── TICKER ─── */
+.ticker-wrap{background:var(--navy3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:0;overflow:hidden;height:48px;display:flex;align-items:center}
+.ticker-label{flex-shrink:0;background:var(--lime);color:var(--navy);font-family:var(--H);font-weight:800;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;padding:0 22px;height:100%;display:flex;align-items:center;white-space:nowrap}
+.ticker-track{display:flex;animation:ticker 28s linear infinite;white-space:nowrap}
+.ticker-item{font-family:var(--B);font-size:.78rem;color:var(--slate);padding:0 32px;display:inline-flex;align-items:center;gap:16px}
+.ticker-item::after{content:'◆';font-size:.4rem;color:var(--lime);opacity:.7}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+/* ─── SECTION LABELS ─── */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--B);font-size:.65rem;color:var(--lime);letter-spacing:.24em;text-transform:uppercase;margin-bottom:16px}
+.eyebrow::before{content:'//';font-family:var(--H);font-weight:800;font-size:.7rem;color:var(--lime);opacity:.7}
+.sec-h{font-family:var(--H);font-size:clamp(2rem,4vw,3.4rem);font-weight:800;line-height:1.06;letter-spacing:-.015em;color:var(--white);margin-bottom:16px}
+.sec-h .acc{color:var(--lime)}
+.sec-sub{font-size:.92rem;color:var(--slate);line-height:1.85;font-weight:300;max-width:480px}
+
+/* ─── ABOUT ─── */
+#about{background:var(--offw);padding:0;position:relative;overflow:hidden}
+#about::before{content:'HABYM';position:absolute;right:-2%;top:50%;transform:translateY(-50%);font-family:var(--H);font-size:22vw;font-weight:800;color:rgba(9,15,31,.04);line-height:1;pointer-events:none;white-space:nowrap}
+.about-flex{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
+.about-left{background:var(--navy);padding:80px 56px;position:relative;overflow:hidden}
+.about-left::after{content:'';position:absolute;bottom:-80px;right:-80px;width:260px;height:260px;border-radius:50%;border:60px solid rgba(184,146,42,.06)}
+.about-left .eyebrow{color:var(--lime)}
+.about-left .sec-h{color:var(--white)}
+.about-left p{font-size:.9rem;color:rgba(255,255,255,.5);line-height:1.95;font-weight:300;margin-bottom:14px}
+.about-left p strong{color:rgba(255,255,255,.85);font-weight:500}
+.reg-pill{display:inline-flex;align-items:center;gap:10px;background:rgba(184,146,42,.1);border:1px solid rgba(184,146,42,.2);padding:10px 18px;border-radius:var(--r);margin-top:22px}
+.reg-pill i{color:var(--lime);font-size:.8rem}
+.reg-pill span{font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.06em;line-height:1.6}
+.about-right{background:var(--lime);padding:80px 56px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.about-right::before{content:'';position:absolute;top:-100px;left:-100px;width:300px;height:300px;border-radius:50%;background:rgba(9,15,31,.06)}
+.ar-title{font-family:var(--H);font-size:2.4rem;font-weight:800;color:var(--navy);line-height:1.1;position:relative;z-index:1}
+.ar-quote{font-size:1.05rem;font-style:italic;color:rgba(9,15,31,.65);line-height:1.75;margin:28px 0;position:relative;z-index:1;padding-left:20px;border-left:4px solid var(--navy)}
+.vm-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;position:relative;z-index:1}
+.vm-box{background:rgba(9,15,31,.08);border-radius:var(--r);padding:20px}
+.vm-box h5{font-family:var(--H);font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-bottom:8px}
+.vm-box p{font-size:.8rem;color:rgba(9,15,31,.65);line-height:1.7}
+.cac-badge{background:var(--navy);color:var(--lime);font-family:var(--H);font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:12px 18px;border-radius:var(--r);display:inline-flex;align-items:center;gap:10px;margin-top:24px;position:relative;z-index:1;align-self:flex-start}
+.cac-badge i{font-size:.9rem}
+
+/* ─── SERVICES ─── */
+#services{background:var(--navy);position:relative;overflow:hidden}
+.services-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:64px;gap:40px;flex-wrap:wrap}
+.services-top .sec-sub{color:var(--slate)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.svc-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:36px 32px;transition:.35s;position:relative;overflow:hidden;cursor:default}
+.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--lime);transform:scaleX(0);transform-origin:left;transition:.4s}
+.svc-card:hover{border-color:rgba(184,146,42,.25);transform:translateY(-6px);background:var(--navy3)}
+.svc-card:hover::before{transform:scaleX(1)}
+.svc-n{font-family:var(--H);font-size:.58rem;font-weight:700;color:rgba(184,146,42,.5);letter-spacing:.2em;text-transform:uppercase;margin-bottom:20px}
+.svc-emoji{font-size:2rem;margin-bottom:16px;display:block}
+.svc-card h3{font-family:var(--H);font-size:1.15rem;font-weight:700;color:var(--white);margin-bottom:12px;line-height:1.2}
+.svc-card p{font-size:.82rem;color:var(--slate);line-height:1.85;font-weight:300}
+.svc-arr{display:inline-flex;align-items:center;gap:6px;color:var(--lime);font-size:.75rem;font-weight:600;margin-top:20px;letter-spacing:.06em;text-transform:uppercase;opacity:0;transition:.3s}
+.svc-card:hover .svc-arr{opacity:1;transform:translateX(4px)}
+
+/* ─── PRODUCTS ─── */
+#products{background:var(--offw);padding:110px 0}
+.prod-header{text-align:center;margin-bottom:64px}
+.prod-header .eyebrow{justify-content:center}
+.prod-header .sec-h{color:var(--navy)}
+.prod-header .sec-h .acc{color:var(--navy3)}
+.prod-header .sec-sub{color:#5a6480;margin:0 auto}
+.prod-masonry{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.prod-tile{background:var(--navy);border-radius:8px;padding:32px 26px;border:1px solid var(--border);transition:.3s;position:relative;overflow:hidden}
+.prod-tile::after{content:'';position:absolute;bottom:0;right:0;width:80px;height:80px;background:radial-gradient(circle,rgba(184,146,42,.1) 0%,transparent 70%);opacity:0;transition:.4s}
+.prod-tile:hover{border-color:rgba(184,146,42,.3);transform:translateY(-4px)}
+.prod-tile:hover::after{opacity:1}
+.prod-tile.featured{grid-column:span 2;background:linear-gradient(135deg,var(--navy3) 0%,var(--navy) 100%);border-color:rgba(184,146,42,.2)}
+.pt-icon{font-size:2.2rem;margin-bottom:14px;display:block}
+.pt-cat{font-size:.58rem;color:var(--lime);letter-spacing:.2em;text-transform:uppercase;font-family:var(--H);font-weight:700;margin-bottom:8px}
+.pt-name{font-family:var(--H);font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:10px;line-height:1.2}
+.prod-tile.featured .pt-name{font-size:1.4rem}
+.pt-desc{font-size:.78rem;color:var(--slate);line-height:1.8;font-weight:300}
+
+/* ─── WHY ─── */
+#why{background:var(--navy2);padding:110px 0}
+.why-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.why-left .sec-sub{color:var(--slate);margin-top:16px}
+.why-big-num{font-family:var(--H);font-size:clamp(6rem,12vw,10rem);font-weight:800;color:transparent;-webkit-text-stroke:1px rgba(184,146,42,.2);line-height:1;margin-bottom:20px}
+.why-list{display:flex;flex-direction:column;gap:0}
+.why-row{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:24px 0;border-bottom:1px solid var(--border);align-items:start;transition:.25s}
+.why-row:first-child{padding-top:0}
+.why-row:last-child{border-bottom:none}
+.why-row:hover{padding-left:6px}
+.wr-num{font-family:var(--H);font-size:.6rem;font-weight:700;color:var(--lime);letter-spacing:.1em;padding-top:3px}
+.wr-content h4{font-family:var(--H);font-size:1rem;font-weight:700;color:var(--white);margin-bottom:7px}
+.wr-content p{font-size:.83rem;color:var(--slate);line-height:1.8;font-weight:300}
+
+/* ─── TEAM ─── */
+#team{background:var(--navy);padding:110px 0}
+.team-header{text-align:center;max-width:580px;margin:0 auto 72px}
+.team-header .eyebrow{justify-content:center}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tc{background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:.35s}
+.tc:hover{border-color:rgba(184,146,42,.25);transform:translateY(-8px);box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.tc-top{height:160px;background:linear-gradient(135deg,var(--navy3) 0%,var(--navy2) 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.tc-top::before{content:'';position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(184,146,42,.08) 0%,transparent 65%);bottom:-60px;right:-40px}
+.tc-init{width:72px;height:72px;background:rgba(184,146,42,.12);border:2px solid rgba(184,146,42,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--H);font-size:1.5rem;font-weight:800;color:var(--lime);position:relative;z-index:1}
+.tc-body{padding:26px}
+.tc-role{font-size:.6rem;color:var(--lime);letter-spacing:.2em;text-transform:uppercase;font-family:var(--H);font-weight:700;margin-bottom:8px}
+.tc-name{font-family:var(--H);font-size:1.25rem;font-weight:800;color:var(--white);margin-bottom:4px}
+.tc-divider{width:28px;height:3px;background:var(--lime);margin:12px 0}
+.tc-bio{font-size:.8rem;color:var(--slate);line-height:1.8;font-weight:300;margin-bottom:16px}
+.tc-mail{display:flex;align-items:center;gap:8px;font-size:.72rem;color:var(--slate);word-break:break-all}
+.tc-mail i{color:var(--lime);font-size:.8rem;flex-shrink:0}
+.tc-mail a{color:var(--slate);transition:.2s}
+.tc-mail a:hover{color:var(--lime)}
+
+/* ─── CONTACT ─── */
+#contact{background:var(--offw);padding:110px 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
+.ci-panel{background:var(--navy);padding:64px 56px;position:relative;overflow:hidden;border-radius:8px 0 0 8px}
+.ci-panel::after{content:'';position:absolute;right:-80px;bottom:-80px;width:240px;height:240px;border-radius:50%;border:48px solid rgba(184,146,42,.05)}
+.ci-panel .eyebrow{color:var(--lime)}
+.ci-panel .sec-h{color:var(--white);font-size:2.2rem}
+.ci-panel>p{font-size:.88rem;color:rgba(255,255,255,.45);line-height:1.9;font-weight:300;margin:16px 0 36px}
+.citem{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.citem:first-of-type{padding-top:0}
+.citem:last-of-type{border-bottom:none;padding-bottom:0}
+.citem-ico{width:40px;height:40px;border-radius:var(--r);background:rgba(184,146,42,.1);border:1px solid rgba(184,146,42,.2);display:flex;align-items:center;justify-content:center;color:var(--lime);font-size:.85rem;flex-shrink:0}
+.citem-lbl{font-size:.58rem;color:var(--slate);letter-spacing:.16em;text-transform:uppercase;font-family:var(--H);font-weight:700;margin-bottom:5px}
+.citem-val{font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.7}
+.citem-val a{color:rgba(255,255,255,.7);transition:.2s}
+.citem-val a:hover{color:var(--lime)}
+.wa-cta-btn{display:inline-flex;align-items:center;gap:10px;background:#25d366;color:var(--white);font-family:var(--H);font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:13px 24px;border-radius:var(--r);margin-top:28px;transition:.3s}
+.wa-cta-btn:hover{background:#1ebe5e;transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.35)}
+.map-embed{margin-top:24px;border-radius:var(--r);overflow:hidden;border:1px solid var(--border)}
+.map-embed iframe{display:block;width:100%;height:200px;border:none;filter:grayscale(60%)}
+.cf-panel{background:var(--white);padding:64px 56px;border-radius:0 8px 8px 0}
+.cf-panel h3{font-family:var(--H);font-size:1.8rem;font-weight:800;color:var(--navy);margin-bottom:6px}
+.cf-sub{font-size:.85rem;color:#6b7a99;margin-bottom:36px;font-weight:300}
+.fg{margin-bottom:18px}
+.fg label{display:block;font-family:var(--H);font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#6b7a99;margin-bottom:7px}
+.fg input,.fg select,.fg textarea{width:100%;padding:13px 16px;border:1.5px solid #e2e6f0;border-radius:var(--r);background:var(--offw);font-family:var(--B);font-size:.87rem;color:var(--navy);transition:.25s;outline:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--lime2);background:var(--white);box-shadow:0 0 0 3px rgba(184,146,42,.15)}
+.fg textarea{height:120px;resize:vertical}
+.fg select{cursor:pointer}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f-submit{width:100%;padding:15px;background:var(--navy);color:var(--white);border:none;border-radius:var(--r);font-family:var(--H);font-weight:700;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:.3s}
+.f-submit:hover{background:var(--navy3);box-shadow:0 8px 28px rgba(9,15,31,.35)}
+.ok-msg{display:none;background:rgba(184,146,42,.1);border:1px solid rgba(184,146,42,.3);color:#6b4e10;padding:13px 16px;border-radius:var(--r);font-size:.83rem;margin-top:14px;text-align:center}
+
+/* ─── FOOTER ─── */
+footer{background:var(--navy2);padding:72px 0 0;border-top:1px solid var(--border)}
+.ft-main{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:48px;padding-bottom:56px;border-bottom:1px solid var(--border)}
+.ft-logo-row{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.ft-mark{width:42px;height:42px;background:var(--lime);clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);display:flex;align-items:center;justify-content:center;font-family:var(--H);font-size:1rem;font-weight:800;color:var(--navy)}
+.ft-co-name{font-family:var(--H);font-size:1rem;font-weight:800;color:var(--white)}
+.ft-co-tag{font-size:.5rem;color:var(--slate);letter-spacing:.16em;text-transform:uppercase;margin-top:2px;font-family:var(--B)}
+.ft-about{font-size:.82rem;color:var(--slate);line-height:1.9;font-weight:300;max-width:290px}
+.ft-reg{font-size:.58rem;color:rgba(255,255,255,.25);letter-spacing:.04em;line-height:1.9;margin-top:18px;font-family:var(--B)}
+.ft-col h5{font-family:var(--H);font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:20px}
+.ft-col ul li{margin-bottom:10px}
+.ft-col ul a{font-size:.82rem;color:var(--slate);transition:.2s}
+.ft-col ul a:hover{color:var(--lime)}
+.fci{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start}
+.fci i{color:var(--lime);font-size:.75rem;margin-top:3px;flex-shrink:0}
+.fci a,.fci span{font-size:.79rem;color:var(--slate);transition:.2s;word-break:break-all}
+.fci a:hover{color:var(--lime)}
+.ft-bottom{padding:20px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-family:var(--B);font-size:.62rem;letter-spacing:.04em;color:rgba(255,255,255,.2)}
+.ft-lime{color:var(--lime)}
+
+/* ─── WA FLOAT ─── */
+#wa-float{position:fixed;bottom:28px;right:28px;z-index:997;width:56px;height:56px;border-radius:50%;background:#25d366;color:var(--white);display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 8px 28px rgba(37,211,102,.45);transition:.3s}
+#wa-float:hover{transform:scale(1.12);box-shadow:0 14px 40px rgba(37,211,102,.55)}
+#wa-float .wa-tip{position:absolute;right:68px;background:var(--white);color:var(--navy);font-family:var(--H);font-size:.65rem;font-weight:700;white-space:nowrap;padding:7px 12px;border-radius:var(--r);box-shadow:0 4px 16px rgba(0,0,0,.15);opacity:0;transform:translateX(8px);transition:.25s;pointer-events:none}
+#wa-float:hover .wa-tip{opacity:1;transform:translateX(0)}
+
+/* ─── ANIMATIONS ─── */
+.fade-up{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
+.fade-up.in{opacity:1;transform:translateY(0)}
+.fade-left{opacity:0;transform:translateX(-32px);transition:opacity .7s ease,transform .7s ease}
+.fade-left.in{opacity:1;transform:translateX(0)}
+.fade-right{opacity:0;transform:translateX(32px);transition:opacity .7s ease,transform .7s ease}
+.fade-right.in{opacity:1;transform:translateX(0)}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1100px){
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .prod-masonry{grid-template-columns:1fr 1fr}
+  .prod-tile.featured{grid-column:span 2}
+  .about-flex{grid-template-columns:1fr}
+  .why-wrap{grid-template-columns:1fr}
+  .why-big-num{display:none}
+  .team-grid{grid-template-columns:1fr 1fr}
+  .ft-main{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .ci-panel{border-radius:8px}
+  .cf-panel{border-radius:8px}
+  .services-top{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:768px){
+  section{padding:80px 0}
+  .nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:rgba(9,15,31,.97);border-bottom:1px solid var(--border);flex-direction:column;padding:16px;gap:4px}
+  .nav-links.open{display:flex}
+  .nav-links a{text-align:center;padding:12px}
+  .nav-cta-btn{margin-left:0;margin-top:4px}
+  .burger{display:flex}
+  #nav{position:sticky}
+  .svc-grid{grid-template-columns:1fr}
+  .prod-masonry{grid-template-columns:1fr}
+  .prod-tile.featured{grid-column:span 1}
+  .team-grid{grid-template-columns:1fr}
+  .ft-main{grid-template-columns:1fr}
+  .f-row{grid-template-columns:1fr}
+  .ci-panel,.cf-panel{padding:40px 28px}
+  .about-left,.about-right{padding:56px 32px}
+  .vm-pair{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .wrap{padding:0 20px}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .hero-actions{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ ANNOUNCEMENT BAR ══ -->
+<div class="ann-bar">
+  <span>🇳🇬 &nbsp;CAC-Registered · CAMA 2020 · Kano, Nigeria &nbsp;·&nbsp;
+  <a href="#contact">Send a Trade Enquiry →</a></span>
+</div>
+
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <div class="wrap">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-mark">H</div>
+        <div class="brand-words">
+          <div class="bw1">HABYM NIGERIA LTD</div>
+          <div class="bw2">Commodity Trading &amp; Export · Kano</div>
+        </div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#team">Team</a>
+        <a href="#contact" class="nav-cta-btn">Contact Us</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-grid-pat"></div>
+    <div class="hero-blob"></div>
+  </div>
+  <div class="wrap">
+    <div class="hero-content">
+      <div class="hero-topline fade-up">
+        <span></span>
+        Kano, Nigeria &nbsp;·&nbsp; Incorporated Jan 13, 2026 &nbsp;·&nbsp; CAMA 2020
+      </div>
+      <h1 class="hero-title fade-up">
+        HABYM
+        <span class="hl">Nigeria Ltd</span>
+        <span class="ht">Trade Without Limits.</span>
+      </h1>
+      <p class="hero-sub fade-up">
+        A fully registered Nigerian commodity trading company — exporting agricultural produce, solid minerals, and general merchandise from Kano to domestic and international markets.
+      </p>
+      <div class="hero-actions fade-up">
+        <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane"></i> Send Trade Enquiry</a>
+        <a href="#services" class="btn-ghost"><i class="fas fa-chevron-down"></i> Explore Services</a>
+        <a href="https://wa.me/2348032849071" target="_blank" class="wa-link">
+          <i class="fab fa-whatsapp" style="font-size:1.2rem"></i> +234 803 284 9071
+        </a>
+      </div>
+      <div class="hero-stats fade-up">
+        <div class="hs">
+          <div class="hs-n" data-count="100">0%</div>
+          <div class="hs-l">Nigerian-Owned</div>
+        </div>
+        <div class="hs">
+          <div class="hs-n">₦1M</div>
+          <div class="hs-l">Share Capital</div>
+        </div>
+        <div class="hs">
+          <div class="hs-n">6+</div>
+          <div class="hs-l">Trade Verticals</div>
+        </div>
+        <div class="hs">
+          <div class="hs-n">INT'L</div>
+          <div class="hs-l">Export Reach</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TICKER ══ -->
+<div class="ticker-wrap">
+  <div class="ticker-label">Now Trading</div>
+  <div style="overflow:hidden;flex:1">
+    <div class="ticker-track">
+      <span class="ticker-item">Agricultural Produce</span>
+      <span class="ticker-item">Cash Crops</span>
+      <span class="ticker-item">Sesame Seeds</span>
+      <span class="ticker-item">Solid Minerals</span>
+      <span class="ticker-item">Industrial Inputs</span>
+      <span class="ticker-item">General Merchandise</span>
+      <span class="ticker-item">Groundnuts</span>
+      <span class="ticker-item">Import &amp; Export</span>
+      <span class="ticker-item">Wholesale Distribution</span>
+      <span class="ticker-item">Trade Agency</span>
+      <span class="ticker-item">Agricultural Produce</span>
+      <span class="ticker-item">Cash Crops</span>
+      <span class="ticker-item">Sesame Seeds</span>
+      <span class="ticker-item">Solid Minerals</span>
+      <span class="ticker-item">Industrial Inputs</span>
+      <span class="ticker-item">General Merchandise</span>
+      <span class="ticker-item">Groundnuts</span>
+      <span class="ticker-item">Import &amp; Export</span>
+      <span class="ticker-item">Wholesale Distribution</span>
+      <span class="ticker-item">Trade Agency</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ABOUT ══ -->
+<section id="about" style="padding:0">
+  <div class="about-flex">
+    <div class="about-left fade-left">
+      <div class="eyebrow">Who We Are</div>
+      <h2 class="sec-h" style="font-size:clamp(1.8rem,3.5vw,2.8rem)">Built for<br>Nigerian Trade.</h2>
+      <p>HABYM Nigeria Ltd is a duly incorporated private limited liability company under the <strong>Companies and Allied Matters Act 2020 (CAMA)</strong>, registered with the Corporate Affairs Commission (CAC) of the Federal Republic of Nigeria.</p>
+      <p>Headquartered in Kano — Nigeria's premier commercial hub for Northern commodities — we operate as exporters, importers, distributors, wholesalers, and trade agents across a broad spectrum of goods and commodities.</p>
+      <p>Our operations span <strong>agricultural produce, cash crops, solid minerals, and industrial inputs</strong>, connecting Nigerian markets to domestic and international buyers with reliable logistics.</p>
+      <div class="reg-pill">
+        <i class="fas fa-certificate"></i>
+        <span>
+          HABYM NIGERIA LTD &nbsp;·&nbsp; Incorporated: January 13, 2026<br>
+          Stamp Duty Cert: 2026-0996-41632-07740 &nbsp;·&nbsp; CAMA 2020 · FRN
+        </span>
+      </div>
+    </div>
+    <div class="about-right fade-right">
+      <div>
+        <div class="ar-title">Connecting<br>Nigeria to<br>the World.</div>
+        <p class="ar-quote">"We are committed to transparent, compliant, and profitable trade — building lasting partnerships between Nigerian producers and global markets."</p>
+      </div>
+      <div>
+        <div class="vm-pair">
+          <div class="vm-box">
+            <h5>Our Vision</h5>
+            <p>To become a leading commodity trading company linking Northern Nigeria's produce to global markets.</p>
+          </div>
+          <div class="vm-box">
+            <h5>Our Mission</h5>
+            <p>Delivering quality commodities with transparent trade practices and reliable logistics partnerships.</p>
+          </div>
+        </div>
+        <a href="#contact" class="cac-badge">
+          <i class="fas fa-shield-halved"></i>
+          CAC Certified · FRN Registered · CAMA 2020
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══ -->
+<section id="services">
+  <div class="wrap">
+    <div class="services-top">
+      <div class="fade-left">
+        <div class="eyebrow">What We Do</div>
+        <h2 class="sec-h">Our Core <span class="acc">Services</span></h2>
+      </div>
+      <p class="sec-sub fade-right">
+        From agricultural commodities to industrial inputs — HABYM provides end-to-end trading solutions for buyers and sellers in Nigerian and international markets.
+      </p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card fade-up">
+        <div class="svc-n">01</div>
+        <span class="svc-emoji">🌍</span>
+        <h3>Export &amp; Import Trading</h3>
+        <p>Full-service export and import operations for all categories of goods and commodities — locally produced or internationally sourced — with complete logistics and documentation support.</p>
+        <div class="svc-arr">Enquire <i class="fas fa-arrow-right"></i></div>
+      </div>
+      <div class="svc-card fade-up">
+        <div class="svc-n">02</div>
+        <span class="svc-emoji">🌾</span>
+        <h3>Agricultural Commodity Trading</h3>
+        <p>Specialised in Northern Nigerian agricultural produce — sesame, groundnuts, soybeans, hibiscus, ginger, and other cash crops — for domestic and international export markets.</p>
+        <div class="svc-arr">Enquire <i class="fas fa-arrow-right"></i></div>
+      </div>
+      <div class="svc-card fade-up">
+        <div class="svc-n">03</div>
+        <span class="svc-emoji">⛏️</span>
+        <h3>Solid Minerals Supply</h3>
+        <p>Compliant trading of solid minerals and natural resources from Nigeria's mineral-rich Northern regions — connecting local deposits with domestic processors and global buyers.</p>
+        <div class="svc-arr">Enquire <i class="fas fa-arrow-right"></i></div>
+      </div>
+      <div class="svc-card fade-up">
+        <div class="svc-n">04</div>
+        <span class="svc-emoji">🏭</span>
+        <h3>Industrial Input Supply</h3>
+        <p>Sourcing and distributing industrial raw materials and inputs for Nigeria's manufacturing and processing sectors — ensuring steady, cost-effective supply chains.</p>
+        <div class="svc-arr">Enquire <i class="fas fa-arrow-right"></i></div>
+      </div>
+      <div class="svc-card fade-up">
+        <div class="svc-n">05</div>
+        <span class="svc-emoji">📦</span>
+        <h3>Wholesale &amp; Distribution</h3>
+        <p>Operating as wholesalers, retailers, and manufacturers' representatives across key Nigerian markets — distributing a wide range of consumer and commercial products through established networks.</p>
+        <div class="svc-arr">Enquire <i class="fas fa-arrow-right"></i></div>
+      </div>
+      <div class="svc-card fade-up">
+        <div class="svc-n">06</div>
+        <span class="svc-emoji">🤝</span>
+        <h3>Trade Agency &amp; Representation</h3>
+        <p>Licensed agents and local representatives for foreign principals seeking reliable Nigerian market access — with deep knowledge of Northern Nigerian commercial networks.</p>
+        <div class="svc-arr">Enquire <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRODUCTS ══ -->
+<section id="products">
+  <div class="wrap">
+    <div class="prod-header fade-up">
+      <div class="eyebrow">Commodities &amp; Goods</div>
+      <h2 class="sec-h" style="color:var(--navy)">What We <span style="color:var(--navy3)">Trade</span></h2>
+      <p class="sec-sub" style="color:#5a6480;margin:0 auto">A diverse portfolio covering Nigeria's most valuable export commodities and import-ready merchandise.</p>
+    </div>
+    <div class="prod-masonry">
+      <div class="prod-tile featured fade-up">
+        <span class="pt-icon">🌱</span>
+        <div class="pt-cat">Star Export · Cash Crops</div>
+        <div class="pt-name">Sesame Seeds &amp; Groundnuts</div>
+        <p class="pt-desc">Our flagship export commodities. Premium white and brown sesame seeds, hulled/unhulled, sourced directly from Northern Nigerian farmers. Also trading in raw and processed groundnuts for food and industrial oil applications — available in bulk with competitive FOB/CIF pricing.</p>
+      </div>
+      <div class="prod-tile fade-up">
+        <span class="pt-icon">🌸</span>
+        <div class="pt-cat">Botanicals</div>
+        <div class="pt-name">Hibiscus &amp; Ginger</div>
+        <p class="pt-desc">Dried hibiscus flowers and ginger root — among Nigeria's fastest-growing export commodities in global herbal and beverage markets.</p>
+      </div>
+      <div class="prod-tile fade-up">
+        <span class="pt-icon">🌽</span>
+        <div class="pt-cat">Grains</div>
+        <div class="pt-name">Maize, Millet &amp; Sorghum</div>
+        <p class="pt-desc">Bulk grain supply for processors, food manufacturers, and international grain traders — Northern Nigerian sourced.</p>
+      </div>
+      <div class="prod-tile fade-up">
+        <span class="pt-icon">⛏️</span>
+        <div class="pt-cat">Minerals</div>
+        <div class="pt-name">Solid Minerals</div>
+        <p class="pt-desc">Compliant trading of Nigeria's solid mineral resources for domestic industry and international buyers.</p>
+      </div>
+      <div class="prod-tile fade-up">
+        <span class="pt-icon">🏗️</span>
+        <div class="pt-cat">Industrial</div>
+        <div class="pt-name">Industrial Inputs</div>
+        <p class="pt-desc">Raw materials and industrial inputs for manufacturing — from agro-processing to construction supply chains across Nigeria.</p>
+      </div>
+      <div class="prod-tile fade-up">
+        <span class="pt-icon">🥜</span>
+        <div class="pt-cat">Oilseeds</div>
+        <div class="pt-name">Soybeans &amp; Derivatives</div>
+        <p class="pt-desc">Premium soybeans and processed derivatives including soy oil and meal for food and industrial applications.</p>
+      </div>
+      <div class="prod-tile fade-up">
+        <span class="pt-icon">📦</span>
+        <div class="pt-cat">General Trade</div>
+        <div class="pt-name">General Merchandise</div>
+        <p class="pt-desc">Import and wholesale distribution of consumer goods, commodities, and merchandise for Nigerian retail and commercial markets.</p>
+      </div>
+      <div class="prod-tile fade-up">
+        <span class="pt-icon">🛢️</span>
+        <div class="pt-cat">Value-Added</div>
+        <div class="pt-name">Agro-Processed Goods</div>
+        <p class="pt-desc">Value-added agro-processed products including oils, flour, and derivatives from Nigerian agricultural raw materials.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY HABYM ══ -->
+<section id="why">
+  <div class="wrap">
+    <div class="why-wrap">
+      <div class="fade-left">
+        <div class="why-big-num">05</div>
+        <div class="eyebrow">Our Advantage</div>
+        <h2 class="sec-h">Why Partner<br>With <span class="acc">HABYM</span></h2>
+        <p class="sec-sub">We combine local market depth with international trade standards — protecting your interests on every transaction from Kano to the world.</p>
+      </div>
+      <div class="why-list">
+        <div class="why-row fade-up">
+          <div class="wr-num">01</div>
+          <div class="wr-content">
+            <h4>Fully Registered &amp; CAC-Certified</h4>
+            <p>Incorporated under CAMA 2020 with full CAC certification. Every operation is legally compliant, giving partners complete regulatory assurance on all transactions.</p>
+          </div>
+        </div>
+        <div class="why-row fade-up">
+          <div class="wr-num">02</div>
+          <div class="wr-content">
+            <h4>Strategic Kano Base</h4>
+            <p>Located at the heart of Nigeria's Northern commodity trade — direct access to primary producers, established supply networks, and major transport corridors.</p>
+          </div>
+        </div>
+        <div class="why-row fade-up">
+          <div class="wr-num">03</div>
+          <div class="wr-content">
+            <h4>Diverse Multi-Commodity Portfolio</h4>
+            <p>Agricultural produce to solid minerals to general merchandise — our broad trading scope means one trusted partner can serve multiple sourcing needs simultaneously.</p>
+          </div>
+        </div>
+        <div class="why-row fade-up">
+          <div class="wr-num">04</div>
+          <div class="wr-content">
+            <h4>International Trade Authorisation</h4>
+            <p>Structured and legally authorised for both domestic and cross-border trade — a competent Nigerian partner for foreign buyers and international commodity traders.</p>
+          </div>
+        </div>
+        <div class="why-row fade-up">
+          <div class="wr-num">05</div>
+          <div class="wr-content">
+            <h4>Transparent &amp; Honest Trade</h4>
+            <p>Long-term partnerships are built on trust. We deliver clear contracts, honest grading, transparent pricing, and open communication on every deal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TEAM ══ -->
+<section id="team">
+  <div class="wrap">
+    <div class="team-header fade-up">
+      <div class="eyebrow">Our People</div>
+      <h2 class="sec-h">The Team Behind <span class="acc">HABYM</span></h2>
+    </div>
+    <div class="team-grid">
+      <div class="tc fade-up">
+        <div class="tc-top">
+          <div class="tc-init">RYM</div>
+        </div>
+        <div class="tc-body">
+          <div class="tc-role">Founder &amp; Chief Executive Officer</div>
+          <div class="tc-name">Rukayya Yau Muhammad</div>
+          <div class="tc-divider"></div>
+          <p class="tc-bio">Founding shareholder and CEO of HABYM Nigeria Ltd, holding 1,000,000 shares. Based at 50, Muhammadu Buhari Way, Kano. Drives the company's strategy for commodity trading and international market expansion.</p>
+          <div class="tc-mail"><i class="fas fa-envelope"></i><a href="/cdn-cgi/l/email-protection#0e7c77634e666f6c7763206d6163206069"><span class="__cf_email__" data-cfemail="e092998da0888182998dce838f8dce8e87">[email&#160;protected]</span></a></div>
+        </div>
+      </div>
+      <div class="tc fade-up">
+        <div class="tc-top">
+          <div class="tc-init">GM</div>
+        </div>
+        <div class="tc-body">
+          <div class="tc-role">General Manager</div>
+          <div class="tc-name">General Manager</div>
+          <div class="tc-divider"></div>
+          <p class="tc-bio">Responsible for day-to-day operations, trade execution, supplier management, and ensuring HABYM's domestic and export activities run with full efficiency and integrity.</p>
+          <div class="tc-mail"><i class="fas fa-envelope"></i><a href="/cdn-cgi/l/email-protection#81c6ecc1e9e0e3f8ecafe2eeecafefe6"><span class="__cf_email__" data-cfemail="195e745971787b6074377a767437777e">[email&#160;protected]</span></a></div>
+        </div>
+      </div>
+      <div class="tc fade-up">
+        <div class="tc-top">
+          <div class="tc-init">SS</div>
+        </div>
+        <div class="tc-body">
+          <div class="tc-role">Legal Adviser &amp; Incorporation Witness</div>
+          <div class="tc-name">Suleiman Salisu</div>
+          <div class="tc-divider"></div>
+          <p class="tc-bio">Legal practitioner and official witness to HABYM's Articles of Association. Based at 16, Idris Garba Close, Abuja, FCT, Nigeria. Provides ongoing legal guidance to the company.</p>
+          <div class="tc-mail"><i class="fas fa-envelope"></i><a href="/cdn-cgi/l/email-protection#533a3d353c133b32312a3e7d303c3e7d3d34"><span class="__cf_email__" data-cfemail="4e272028210e262f2c3723602d2123602029">[email&#160;protected]</span></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:56px;" class="fade-up">
+      <div class="eyebrow" style="justify-content:center">Get In Touch</div>
+      <h2 class="sec-h" style="color:var(--navy)">Let's <span style="color:var(--navy3)">Do Business</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="ci-panel fade-left">
+        <div class="eyebrow">Our Details</div>
+        <h3 class="sec-h" style="font-size:1.8rem;margin-bottom:8px">Contact<br><span class="acc">Information</span></h3>
+        <p>Reach out to the HABYM team for trade enquiries, partnerships, or general business information. We respond within 24 hours.</p>
+        <div class="citem">
+          <div class="citem-ico"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="citem-lbl">Head Office</div>
+            <div class="citem-val">50, Muhammadu Buhari Way,<br>Kano, Kano State, Nigeria</div>
+          </div>
+        </div>
+        <div class="citem">
+          <div class="citem-ico"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="citem-lbl">General Enquiries</div>
+            <div class="citem-val"><a href="/cdn-cgi/l/email-protection#0960676f664961686b7064276a666427676e"><span class="__cf_email__" data-cfemail="d3babdb5bc93bbb2b1aabefdb0bcbefdbdb4">[email&#160;protected]</span></a></div>
+          </div>
+        </div>
+        <div class="citem">
+          <div class="citem-ico"><i class="fas fa-user-tie"></i></div>
+          <div>
+            <div class="citem-lbl">CEO — Rukayya Yau Muhammad</div>
+            <div class="citem-val"><a href="/cdn-cgi/l/email-protection#67151e0a270f06051e0a4904080a490900"><span class="__cf_email__" data-cfemail="23515a4e634b42415a4e0d404c4e0d4d44">[email&#160;protected]</span></a></div>
+          </div>
+        </div>
+        <div class="citem">
+          <div class="citem-ico"><i class="fas fa-briefcase"></i></div>
+          <div>
+            <div class="citem-lbl">General Manager</div>
+            <div class="citem-val"><a href="/cdn-cgi/l/email-protection#652208250d04071c084b060a084b0b02"><span class="__cf_email__" data-cfemail="01466c41696063786c2f626e6c2f6f66">[email&#160;protected]</span></a></div>
+          </div>
+        </div>
+        <div class="citem">
+          <div class="citem-ico"><i class="fab fa-whatsapp"></i></div>
+          <div>
+            <div class="citem-lbl">Phone &amp; WhatsApp</div>
+            <div class="citem-val"><a href="tel:+2348032849071">+234 803 284 9071</a></div>
+          </div>
+        </div>
+        <div class="citem">
+          <div class="citem-ico"><i class="fas fa-certificate"></i></div>
+          <div>
+            <div class="citem-lbl">Registration</div>
+            <div class="citem-val">Incorporated: January 13, 2026<br>CAMA 2020 · Federal Republic of Nigeria</div>
+          </div>
+        </div>
+        <a href="https://wa.me/2348032849071" target="_blank" class="wa-cta-btn">
+          <i class="fab fa-whatsapp" style="font-size:1.1rem"></i> Chat on WhatsApp Now
+        </a>
+        <div class="map-embed">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497418.5!2d8.4509!3d12.0022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ae8584f2f81aad%3A0x3e8ef7b22d6c2b0d!2sKano%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1700000000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="cf-panel fade-right">
+        <h3>Send a Trade Enquiry</h3>
+        <p class="cf-sub">Tell us what you need — product, quantity, destination — and our team will respond promptly with pricing and availability.</p>
+        <form id="cForm" novalidate>
+          <div class="f-row">
+            <div class="fg"><label>First Name *</label><input type="text" placeholder="First name" required></div>
+            <div class="fg"><label>Last Name *</label><input type="text" placeholder="Last name" required></div>
+          </div>
+          <div class="fg"><label>Email Address *</label><input type="email" placeholder="your@email.com" required></div>
+          <div class="fg"><label>Phone / WhatsApp</label><input type="tel" placeholder="+234 803 284 9071"></div>
+          <div class="fg"><label>Your Country</label><input type="text" placeholder="Country of operation"></div>
+          <div class="fg">
+            <label>Enquiry Type *</label>
+            <select required>
+              <option value="" disabled selected>Select enquiry type…</option>
+              <option>Agricultural Commodity Export</option>
+              <option>Solid Minerals Trading</option>
+              <option>General Merchandise Import</option>
+              <option>Industrial Input Supply</option>
+              <option>Wholesale / Distribution</option>
+              <option>Trade Agency / Representation</option>
+              <option>Business Partnership</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="fg"><label>Product &amp; Quantity</label><input type="text" placeholder="e.g. Sesame Seeds 20MT CIF Rotterdam"></div>
+          <div class="fg"><label>Your Message *</label><textarea placeholder="Describe your requirements — product, quantity, destination, delivery terms, timeline…" required></textarea></div>
+          <button type="submit" class="f-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+          <div class="ok-msg" id="okMsg">✅ Message sent! We'll respond within 24 hours — or call +234 803 284 9071.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="wrap">
+    <div class="ft-main">
+      <div>
+        <div class="ft-logo-row">
+          <div class="ft-mark">H</div>
+          <div>
+            <div class="ft-co-name">HABYM NIGERIA LTD</div>
+            <div class="ft-co-tag">Commodity Trading &amp; Export</div>
+          </div>
+        </div>
+        <p class="ft-about">A CAC-registered Nigerian company engaged in commodity trading, agricultural exports, import/export, and general merchandise distribution — connecting Nigerian markets to the world from Kano.</p>
+        <p class="ft-reg">
+          Incorporated: January 13, 2026 &nbsp;·&nbsp; CAMA 2020 · Federal Republic of Nigeria<br>
+          Stamp Duty Cert. No: 2026-0996-41632-07740<br>
+          Subscriber: Rukayya Yau Muhammad · 50, Muhammadu Buhari Way, Kano
+        </p>
+      </div>
+      <div class="ft-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About HABYM</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h5>Trade Areas</h5>
+        <ul>
+          <li><a href="#services">Agricultural Export</a></li>
+          <li><a href="#services">Commodity Trading</a></li>
+          <li><a href="#services">Solid Minerals</a></li>
+          <li><a href="#services">Industrial Inputs</a></li>
+          <li><a href="#services">Wholesale &amp; Distribution</a></li>
+          <li><a href="#services">Trade Agency</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h5>Get In Touch</h5>
+        <div class="fci"><i class="fas fa-map-marker-alt"></i><span>50, Muhammadu Buhari Way, Kano, Kano State, Nigeria</span></div>
+        <div class="fci"><i class="fas fa-envelope"></i><a href="/cdn-cgi/l/email-protection#325b5c545d725a53504b5f1c515d5f1c5c55"><span class="__cf_email__" data-cfemail="f1989f979eb1999093889cdf929e9cdf9f96">[email&#160;protected]</span></a></div>
+        <div class="fci"><i class="fas fa-user-tie"></i><a href="/cdn-cgi/l/email-protection#fc8e8591bc949d9e8591d29f9391d2929b"><span class="__cf_email__" data-cfemail="5022293d10383132293d7e333f3d7e3e37">[email&#160;protected]</span></a></div>
+        <div class="fci"><i class="fas fa-briefcase"></i><a href="/cdn-cgi/l/email-protection#eaad87aa828b889387c4898587c4848d"><span class="__cf_email__" data-cfemail="b9fed4f9d1d8dbc0d497dad6d497d7de">[email&#160;protected]</span></a></div>
+        <div class="fci"><i class="fab fa-whatsapp"></i><a href="https://wa.me/2348032849071">+234 803 284 9071</a></div>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© 2026 <span class="ft-lime">HABYM NIGERIA LIMITED</span>. All Rights Reserved. Incorporated under CAMA 2020, FRN.</span>
+      <span>Commodity Trading · Agricultural Export · Kano, Nigeria</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/2348032849071" target="_blank" id="wa-float" title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="wa-tip">Chat on WhatsApp</span>
+</a>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+/* ── Burger ── */
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+burger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  const s = burger.querySelectorAll('span'), o = navLinks.classList.contains('open');
+  s[0].style.transform = o ? 'rotate(45deg) translate(5px,6px)' : '';
+  s[1].style.opacity   = o ? '0' : '1';
+  s[2].style.transform = o ? 'rotate(-45deg) translate(5px,-6px)' : '';
+});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  navLinks.classList.remove('open');
+  burger.querySelectorAll('span').forEach(s => { s.style.transform=''; s.style.opacity=''; });
+}));
+
+/* ── Active Nav ── */
+document.querySelectorAll('section[id]').forEach(sec => {
+  new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting)
+        document.querySelectorAll('.nav-links a').forEach(a =>
+          a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+    });
+  }, { threshold: 0.3 }).observe(sec);
+});
+
+/* ── Scroll Reveal ── */
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if(entry.isIntersecting) setTimeout(() => entry.target.classList.add('in'), i * 90);
+  });
+}, { threshold: 0.07 });
+document.querySelectorAll('.fade-up, .fade-left, .fade-right').forEach(el => obs.observe(el));
+
+/* ── Counter ── */
+function animCount(el) {
+  const target = parseInt(el.dataset.count);
+  if(isNaN(target)) return;
+  let v = 0; const dur = 1800, step = 16, inc = target / (dur / step);
+  const t = setInterval(() => {
+    v += inc;
+    if(v >= target){ el.textContent = target + '%'; clearInterval(t); }
+    else el.textContent = Math.floor(v) + '%';
+  }, step);
+}
+let counted = false;
+new IntersectionObserver(entries => {
+  if(entries[0].isIntersecting && !counted){
+    counted = true;
+    document.querySelectorAll('[data-count]').forEach(el => animCount(el));
+  }
+},{threshold:.3}).observe(document.querySelector('#hero'));
+
+/* ── Form ── */
+document.getElementById('cForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const ok = document.getElementById('okMsg');
+  ok.style.display = 'block';
+  this.reset();
+  setTimeout(() => { ok.style.display = 'none'; }, 7000);
+});
+
+/* ── Nav scroll shadow ── */
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').style.boxShadow =
+    window.scrollY > 20 ? '0 8px 32px rgba(0,0,0,.4)' : 'none';
+});
+</script>
+</body>
+</html>
