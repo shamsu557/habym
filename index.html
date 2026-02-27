@@ -120,41 +120,6 @@ section{padding:110px 0}
 .ticker-item::after{content:'◆';font-size:.4rem;color:var(--lime);opacity:.7}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-
-/* ─── TEAM (light background) ─── */
-#team .tc-top {
-  width: 180px;                     /* diameter of the circle — adjust between 160–220px */
-  height: 180px;                    /* must be equal to width for perfect circle */
-  margin: 0 auto 20px;              /* center horizontally + space below */
-  background: linear-gradient(135deg, #fdfaf5 0%, #f8f5f0 100%);
-  border-radius: 50%;               /* makes it circular */
-  overflow: hidden;
-  border: 4px solid var(--lime);    /* optional: nice gold border */
-  box-shadow: 0 8px 24px rgba(184,146,42,0.15); /* optional: subtle shadow */
-  position: relative;
-}
-
-/* Image inside the circle */
-#team .tc-top img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;                /* fills the circle, crops edges if needed */
-  object-position: 50% 20%;         /* 20% from top — good for most portraits (shows head & shoulders) */
-  /* Alternative positions if needed: 
-     - 50% 10%   → more head visible
-     - 50% 30%   → more face/shoulders
-  */
-}
-
-/* Optional: make the whole card more compact around the circle */
-#team .tc {
-  text-align: center;               /* center text below photo */
-  padding-top: 25px;                   /* remove top padding if needed */
-}
-
-#team .tc-body {
-  padding: 20px 24px;               /* slightly less top padding */
-}
 /* ─── SECTION LABELS ─── */
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--B);font-size:.65rem;color:var(--lime);letter-spacing:.24em;text-transform:uppercase;margin-bottom:16px}
 .eyebrow::before{content:'//';font-family:var(--H);font-weight:800;font-size:.7rem;color:var(--lime);opacity:.7}
@@ -244,17 +209,26 @@ section{padding:110px 0}
 #team .sec-h{color:var(--navy)}
 .team-header{text-align:center;max-width:580px;margin:0 auto 72px}
 .team-header .eyebrow{justify-content:center}
-.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:900px;margin:0 auto}
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:960px;margin:0 auto}
 .tc{background:var(--white);border:1px solid #e2e6f0;border-radius:8px;overflow:hidden;transition:.35s}
 .tc:hover{border-color:var(--lime);transform:translateY(-8px);box-shadow:0 24px 60px rgba(0,0,0,.12)}
-.tc-top{height:220px;background:linear-gradient(135deg,#fdfaf5 0%,#f8f5f0 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.tc-top img{width:100%;height:100%;object-fit:cover}
-.tc-body{padding:26px}
+.tc-top{
+  width:180px;height:180px;
+  margin:25px auto 0;
+  background:linear-gradient(135deg,#fdfaf5 0%,#f8f5f0 100%);
+  border-radius:50%;
+  overflow:hidden;
+  border:4px solid var(--lime);
+  box-shadow:0 8px 24px rgba(184,146,42,0.15);
+  position:relative;
+}
+.tc-top img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.tc-body{padding:20px 26px 26px;text-align:center}
 .tc-role{font-size:.6rem;color:var(--lime);letter-spacing:.2em;text-transform:uppercase;font-family:var(--H);font-weight:700;margin-bottom:8px}
 .tc-name{font-family:var(--H);font-size:1.25rem;font-weight:800;color:var(--navy);margin-bottom:4px}
-.tc-divider{width:28px;height:3px;background:var(--lime);margin:12px 0}
+.tc-divider{width:28px;height:3px;background:var(--lime);margin:12px auto}
 .tc-bio{font-size:.8rem;color:#5a6480;line-height:1.8;font-weight:300;margin-bottom:16px}
-.tc-mail{display:flex;align-items:center;gap:8px;font-size:.72rem;color:#5a6480;margin-top:8px}
+.tc-mail{display:flex;align-items:center;justify-content:center;gap:8px;font-size:.72rem;color:#5a6480;margin-top:8px}
 .tc-mail i{color:var(--lime);font-size:.8rem;flex-shrink:0}
 .tc-mail a{color:#5a6480;transition:.2s}
 .tc-mail a:hover{color:var(--lime)}
@@ -336,7 +310,7 @@ footer{background:var(--navy2);padding:72px 0 0;border-top:1px solid var(--borde
   .about-flex{grid-template-columns:1fr}
   .why-wrap{grid-template-columns:1fr}
   .why-big-num{display:none}
-  .team-grid{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr 1fr}
   .ft-main{grid-template-columns:1fr 1fr}
   .contact-grid{grid-template-columns:1fr}
   .ci-panel{border-radius:8px}
@@ -701,12 +675,14 @@ footer{background:var(--navy2);padding:72px 0 0;border-top:1px solid var(--borde
       <h2 class="sec-h">The Team Behind <span class="acc">HABYM</span></h2>
     </div>
     <div class="team-grid">
+
+      <!-- CEO -->
       <div class="tc fade-up">
         <div class="tc-top">
           <img src="./assets/ceo.jpg" alt="Rukayya Yau Muhammad">
         </div>
         <div class="tc-body">
-          <div class="tc-role">Founder & Chief Executive Officer</div>
+          <div class="tc-role">Founder &amp; Chief Executive Officer</div>
           <div class="tc-name">Rukayya Yau Muhammad</div>
           <div class="tc-divider"></div>
           <p class="tc-bio">Founding shareholder and CEO of HABYM Nigeria Ltd, holding 1,000,000 shares. Based at 50, Muhammadu Buhari Way, Kano. Drives the company's strategy for commodity trading and international market expansion.</p>
@@ -716,27 +692,66 @@ footer{background:var(--navy2);padding:72px 0 0;border-top:1px solid var(--borde
           </div>
           <div class="tc-mail">
             <i class="fas fa-phone-alt"></i>
-            <span>+234 8032849071</span>
+            <span>+234 803 284 9071</span>
           </div>
         </div>
       </div>
 
+      <!-- GM -->
       <div class="tc fade-up">
         <div class="tc-top">
-          <img src="./assets/gm.jpg" alt="Suleiman Salisu">
+          <img src="./assets/gm.jpg" alt="Umar Abdulganiyu Madigawa">
         </div>
         <div class="tc-body">
           <div class="tc-role">General Manager</div>
-          <div class="tc-name">Suleiman Salisu</div>
+          <div class="tc-name">Umar Abdulganiyu Madigawa</div>
           <div class="tc-divider"></div>
           <p class="tc-bio">Responsible for day-to-day operations, trade execution, supplier management, logistics coordination, and ensuring HABYM's domestic and export activities run with full efficiency and integrity.</p>
           <div class="tc-mail">
             <i class="fas fa-envelope"></i>
-            <a href="mailto:gm@habym.com.ng">gm@habym.com.ng</a>
+            <a href="mailto:madigawa@habym.com.ng">madigawa@habym.com.ng</a>
           </div>
-          <!-- No phone for GM -->
+          <div class="tc-mail">
+            <i class="fas fa-phone-alt"></i>
+            <span>+234 803 372 5461</span>
+          </div>
         </div>
       </div>
+
+      <!-- Marketing Manager -->
+      <div class="tc fade-up">
+        <div class="tc-top">
+          <img src="./assets/asiy.jpg" alt="Asiya Muhammad Jibril">
+        </div>
+        <div class="tc-body">
+          <div class="tc-role">Marketing Manager</div>
+          <div class="tc-name">Asiya Muhammad Jibril</div>
+          <div class="tc-divider"></div>
+          <p class="tc-bio">Leads HABYM's marketing strategy, brand development, and market outreach — driving awareness of our commodity trading services across domestic and international channels.</p>
+          <div class="tc-mail">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:asimji@habym.com.ng">asimji@habym.com.ng</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- HR Manager -->
+      <div class="tc fade-up">
+        <div class="tc-top">
+          <img src="./assets/umm.jpg" alt="Ummi Yau Muhammad">
+        </div>
+        <div class="tc-body">
+          <div class="tc-role">Human Resource Manager</div>
+          <div class="tc-name">Ummi Yau Muhammad</div>
+          <div class="tc-divider"></div>
+          <p class="tc-bio">Oversees human capital development, recruitment, staff welfare, and organisational culture at HABYM — ensuring the company is supported by a capable and motivated team.</p>
+          <div class="tc-mail">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:umyam@habym.com.ng">umyam@habym.com.ng</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -764,21 +779,21 @@ footer{background:var(--navy2);padding:72px 0 0;border-top:1px solid var(--borde
           <div class="citem-ico"><i class="fas fa-envelope"></i></div>
           <div>
             <div class="citem-lbl">General Enquiries</div>
-            <div class="citem-val"><a href="mailto:info@habym.ng"><span class="__cf_email__" data-cfemail="d3babdb5bc93bbb2b1aabefdb0bcbefdbdb4">[email&#160;protected]</span></a></div>
+            <div class="citem-val"><a href="mailto:info@habym.com.ng">info@habym.com.ng</a></div>
           </div>
         </div>
         <div class="citem">
           <div class="citem-ico"><i class="fas fa-user-tie"></i></div>
           <div>
             <div class="citem-lbl">CEO — Rukayya Yau Muhammad</div>
-            <div class="citem-val"><a href="mailto:rym@habym.ng"><span class="__cf_email__" data-cfemail="67151e0a270f06051e0a4904080a490900">rym@habym.com.ng</span></a></div>
+            <div class="citem-val"><a href="mailto:rym@habym.com.ng">rym@habym.com.ng</a></div>
           </div>
         </div>
         <div class="citem">
           <div class="citem-ico"><i class="fas fa-briefcase"></i></div>
           <div>
             <div class="citem-lbl">General Manager</div>
-            <div class="citem-val"><a href="mailto:gm@habym.ng"><span class="__cf_email__" data-cfemail="652208250d04071c084b060a084b0b02">[email&#160;gm@habym.com.nh]</span></a></div>
+            <div class="citem-val"><a href="mailto:madigawa@habym.com.ng">madigawa@habym.com.ng</a></div>
           </div>
         </div>
         <div class="citem">
@@ -881,9 +896,9 @@ footer{background:var(--navy2);padding:72px 0 0;border-top:1px solid var(--borde
       <div class="ft-col">
         <h5>Get In Touch</h5>
         <div class="fci"><i class="fas fa-map-marker-alt"></i><span>50, Muhammadu Buhari Way, Kano, Kano State, Nigeria</span></div>
-        <div class="fci"><i class="fas fa-envelope"></i><a href="mailto:info@habym.ng"><span class="__cf_email__" data-cfemail="325b5c545d725a53504b5f1c515d5f1c5c55">[email&#160;protected]</span></a></div>
-        <div class="fci"><i class="fas fa-user-tie"></i><a href="mailto:info@habym.ng"><span class="__cf_email__" data-cfemail="fc8e8591bc949d9e8591d29f9391d2929b">[email&#160;protected]</span></a></div>
-        <div class="fci"><i class="fas fa-briefcase"></i><a href="mailto:info@habym.ng"><span class="__cf_email__" data-cfemail="eaad87aa828b889387c4898587c4848d">[email&#160;protected]</span></a></div>
+        <div class="fci"><i class="fas fa-envelope"></i><a href="mailto:info@habym.com.ng">info@habym.com.ng</a></div>
+        <div class="fci"><i class="fas fa-user-tie"></i><a href="mailto:rym@habym.com.ng">rym@habym.com.ng</a></div>
+        <div class="fci"><i class="fas fa-briefcase"></i><a href="mailto:madigawa@habym.com.ng">madigawa@habym.com.ng</a></div>
         <div class="fci"><i class="fab fa-whatsapp"></i><a href="https://wa.me/2348032849071">+234 803 284 9071</a></div>
       </div>
     </div>
@@ -900,7 +915,7 @@ footer{background:var(--navy2);padding:72px 0 0;border-top:1px solid var(--borde
   <span class="wa-tip">Chat on WhatsApp</span>
 </a>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 /* ── Burger ── */
 const burger = document.getElementById('burger');
 const navLinks = document.getElementById('navLinks');
